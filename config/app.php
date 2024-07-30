@@ -21,7 +21,10 @@
  */
 
 use craft\helpers\App;
+use modules\randomimage\RandomImageModule;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'modules' => ['randomimage' => RandomImageModule::class],
+    'bootstrap' => ['randomimage'],
 ];
